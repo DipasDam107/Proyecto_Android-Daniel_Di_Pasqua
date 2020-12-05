@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <variable
+            name="seleccionado"
+            type="com.example.manutd_danieldipasqua.Jugador"
+            />
+
+    </data>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/gradient">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:id="@+id/tituloPlantillaTextView"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="60dp"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:text="@string/plantilla"
+            android:textSize="25dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:paddingLeft="70dp"
+
+            />
+
+
+        <View android:layout_height="2dip"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_marginTop="20dp"
+            />
+
+        <View
+            android:id="@+id/separadorFinal"
+            android:layout_width="match_parent"
+            android:layout_height="2dip"
+            android:layout_below="@id/tituloPlantillaTextView"
+            android:background="@color/white" />
+
+        <ImageView
+            android:id="@+id/logoPlantillaImage"
+            android:layout_width="90dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            app:srcCompat="@drawable/unitedlogoonly"
+            android:layout_marginLeft="5dp"
+            />
+
+        <TextView
+            android:id="@+id/jugadoresPlantillaTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jugadores"
+            android:textColor="@color/white"
+            android:layout_below="@id/separadorFinal"
+            android:textAllCaps="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <Spinner
+            android:id="@+id/jugadoresSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jugadoresPlantillaTextView"
+            android:entries="@array/planets_array"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/infoJugador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/infojugador"
+            android:layout_below="@id/jugadoresSpinner"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            />
+
+        <TableLayout
+            android:id="@+id/tablaDatosJugador"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/infoJugador"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:text="@string/nombre"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/nombreJugadorEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:text="@{seleccionado.nombre}"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/red" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:text="@string/apellidos"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/apellidosJugadorEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:text="@{seleccionado.apellido}"
+                    />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:text="@string/posicion"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/posicionJugadorEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:text="@{seleccionado.posicion}"
+                    />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:text="@string/demarcacion"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/demarcacionJugadorEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:text="@{seleccionado.demarcacion}"
+                    />
+
+
+            </TableRow>
+
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:text="@string/rol"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/rolJugadorEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:text="@{seleccionado.rol}"
+                    />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:text="@string/numJugaoor"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/numeroJugadorEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:text="@{String.valueOf(seleccionado.numero)}"
+                    />
+
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@color/white"
+                    android:paddingLeft="10dp"
+                    android:text="@string/nacionalidad"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/nacionalidadJugadorEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:text="@{seleccionado.nacionalidad}"
+                    />
+
+
+            </TableRow>
+        </TableLayout>
+
+
+        <TextView
+
+            android:id="@+id/descripcionJugadorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tablaDatosJugador"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/desc"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/descripcionDetalleJugadorTextView"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="8dp"
+            android:justificationMode="inter_word"
+            android:layout_height="wrap_content"
+            android:text="@{seleccionado.descripcion}"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/descripcionJugadorTextView"
+            android:background="@drawable/borde"
+
+            />
+
+
+        <TextView
+            android:id="@+id/poweredPlantillaTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/nikeLogoPlantillaImageView"
+            android:layout_toLeftOf="@id/nikeLogoPlantillaImageView"
+            android:text="@string/powered"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            />
+
+
+
+        <ImageView
+            android:id="@+id/nikeLogoPlantillaImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/nike"
+            android:layout_below="@id/descripcionDetalleJugadorTextView"
+            android:layout_alignParentRight="true"
+
+            />
+
+        <Button
+            android:id="@+id/volverPlantillaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/poweredPlantillaTextView"
+            android:text="@string/volver"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/red"
+            android:layout_marginTop="20dp"
+            />
+    </RelativeLayout>
+
+</ScrollView>
+</layout>

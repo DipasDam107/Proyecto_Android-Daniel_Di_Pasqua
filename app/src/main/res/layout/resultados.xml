@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:id="@+id/tituloResultadosTextView"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="60dp"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:text="@string/resultados"
+            android:textSize="25dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:paddingLeft="70dp"
+
+            />
+
+
+        <View android:layout_height="2dip"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_marginTop="20dp"
+            />
+
+        <View
+            android:id="@+id/separadorFinal"
+            android:layout_width="match_parent"
+            android:layout_height="2dip"
+            android:layout_below="@id/tituloResultadosTextView"
+            android:background="@color/white" />
+
+        <ImageView
+            android:id="@+id/logoResultadosImage"
+            android:layout_width="90dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            app:srcCompat="@drawable/unitedlogoonly"
+            android:layout_marginLeft="5dp" />
+
+        <TableLayout
+            android:id="@+id/tablaResultados"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/separadorFinal"
+            android:layout_marginTop="20dp"
+            android:stretchColumns="*"
+            android:padding="5dp"
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rival"
+                    android:textColor="@color/red"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:layout_margin="2dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/competicion"
+                    android:textColor="@color/red"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:layout_margin="2dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/campo"
+                    android:textColor="@color/red"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:layout_margin="2dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resultado"
+                    android:textColor="@color/red"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:layout_margin="2dp"
+                    />
+
+            </TableRow>
+
+
+        </TableLayout>
+
+
+
+        <TextView
+            android:id="@+id/poweredMenuPrincipalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_alignTop="@id/nikeLogoMenuPrincipalImageView"
+            android:layout_toLeftOf="@id/nikeLogoMenuPrincipalImageView"
+            android:text="@string/powered"
+            android:textColor="@color/white"
+
+            />
+
+
+
+        <ImageView
+            android:id="@+id/nikeLogoMenuPrincipalImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/nike"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/volverResultadosButton"
+            />
+
+
+        <Button
+            android:id="@+id/volverResultadosButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tablaResultados"
+            android:text="@string/volver"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/red"
+            android:layout_marginTop="20dp"
+            />
+    </RelativeLayout>
+
+</ScrollView>

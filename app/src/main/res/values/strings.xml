@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">Manchester United</string>
+    <string name="usuario">Usuario</string>
+    <string name="hintUsuario">Usuario o Correo</string>
+    <string name="hintContraseña">Contraseña</string>
+    <string name="hintApellido">Apellidos</string>
+    <string name="hintNombre">Nombre</string>
+    <string name="correo">Correo</string>
+    <string name="hintCorreo">correo@mail.com</string>
+    <string name="entrar">Log In</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="registrar">Registrar</string>
+
+    <string name="inicioSesion">INICIO DE SESION</string>
+    <string name="registro">NUEVO USUARIO</string>
+    <string name="cerrarSesion">Cerrar Sesión</string>
+    <string name="bienvenido">Bienvenido, </string>
+    <string name="ultimasNoticias">Ultimas Noticias</string>
+    <string name="powered">Powered By</string>
+    <string name="resultados">Resultados</string>
+
+    <!-- Activity Club -->
+    <string name="club">Club</string>
+    <string name="plantilla">Plantilla</string>
+    <string name="estadio">Estadio: Old Trafford</string>
+    <string name="historia">Historia</string>
+    <string name="historiaDetalle">Fundado el 5 de Marzo de 1878, el Manchester United es considerado a dia de hoy uno de los clubes mas populares y laureados del mundo.
+        A nivel nacional el club ha obtenido 20 titulos de liga, 12 FA Cup y 21 Supercopas, sumando a lo anterior 3 Champions League, 1 UEFA, 1 Intercontinental y 1 Mundial de Clubes.
+        Actualmente el Manchester United se encuentra atravesando una etapa de reconstrucción, pero es cuestión de tiempo que este gigante dormido despierte para reclamar la gloria que le corresponde.
+    </string>
+
+    <!-- Activity Plantilla -->
+    <string name="jugadores">Jugadores</string>
+    <string name="infojugador">Info Jugador</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="posicion">Posición</string>
+    <string name="demarcacion">Demarcación</string>
+    <string name="rol">Rol</string>
+    <string name="fecNac">Fecha de Nacimiento</string>
+    <string name="desc">Descripcion</string>
+    <string name="numJugaoor">Numero</string>
+    <string name="nacionalidad">Nacionalidad</string>
+
+    <!-- Activity Noticias -->
+    <string name="noticia">Noticia</string>
+
+    <!-- Activity Resultados-->
+    <string name="campo">Campo</string>
+    <string name="resultado">Resultado</string>
+    <string name="competicion">Competicion</string>
+    <string name="rival">Rival</string>
+
+    <!-- Activity Clasificacion -->
+    <string name="clasificacion">Clasificacion</string>
+    <string name="pj">PJ</string>
+    <string name="pg">PG</string>
+    <string name="pe">PE</string>
+    <string name="pp">PP</string>
+    <string name="gf">GF</string>
+    <string name="gc">GC</string>
+    <string name="dg">DG</string>
+    <string name="pts">PTS</string>
+    <string name="pos">POS</string>
+    <string name="equipo">EQUIPO</string>
+
+    <!-- General -->
+    <string name="volver">Volver</string>
+
+    <!-- Mensaje de Dialogo Crear Usuario -->
+    <string name="sesionNoIniciadaDDP">No se pudo iniciar la sesión</string>
+    <string name="loginIncorrectoDDP">El login o el password que has introducido son incorrectos. Compruébalos y vuelve a intentarlo de nuevo.</string>
+    <string name="aceptarDDP">ACEPTAR</string>
+    <string name="errorLogin">Error de Login</string>
+
+    <!-- Mensaje de Dialogo Registrar Usuario -->
+    <string name="registroFallido">No se pudo registrar al usuario</string>
+    <string name="registroIncorrecto">El usuario o el correo que has introducido ya existen. Compruébalos y vuelve a intentarlo de nuevo.</string>
+    <string name="errorRegistro">Error de Registro</string>
+
+    <!-- Errores-->
+    <string name="errorUsuario">Debes especificar un nombre de usuario válido</string>
+    <string name="errorContra">Debes especificar una contraseña de usuario válido</string>
+    <string name="errorNombre">Debes especificar un nombre válido</string>
+    <string name="errorApellido">Debes especificar un apellido válido</string>
+    <string name="errorCorreo">Debes especificar un correo de usuario válido</string>
+</resources>
