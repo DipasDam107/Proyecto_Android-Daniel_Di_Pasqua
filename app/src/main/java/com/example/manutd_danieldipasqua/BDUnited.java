@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+/*Clase que extiende SQLiteOpenHelper, que va a realizar la conexión a la base de datos especificada*/
 public class BDUnited extends SQLiteOpenHelper {
     public final static String NOME_BD = "dbunited.db";
     public final static int VERSION_BD = 1;

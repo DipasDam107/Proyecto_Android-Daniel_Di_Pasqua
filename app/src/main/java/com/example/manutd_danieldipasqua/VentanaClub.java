@@ -6,6 +6,9 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/*Clase de la ventana de Club. La info de esta ventana no proviene de BD, si no de recurso String
+* Por ello, lo unico relevante es la declaración del listener del botón salir
+* */
 public class VentanaClub extends AppCompatActivity {
 
     private Button volver;

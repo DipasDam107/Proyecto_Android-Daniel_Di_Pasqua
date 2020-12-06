@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
+/*Clase que se encargará de acceder a la base de datos y obtener o escribir los datos necesarios*/
 public class BDDAOSqlLite {
     private BDUnited appbd;
     private Context context;
@@ -16,6 +17,7 @@ public class BDDAOSqlLite {
         this.appbd= new BDUnited(this.context);
     }
 
+    /*Obtiene el usuario para validar el inicio de sesion y lo devuelve. Si devuelve uno es que el usuario se ha validado correctamente, si devuelve nulo es que no existe y el inicio de sesión no es correcto*/
     public Usuario getUsuario(String login, String password) {
         Usuario resultado = null;
         SQLiteDatabase sqlLiteDB = appbd.getWritableDatabase();
@@ -29,6 +31,7 @@ public class BDDAOSqlLite {
         return resultado;
     }
 
+    /*Metodo que comprueba si ya existe un usuario con ese nombre o correo a la hora de registrar, en cuyo caso el registro es inválido.*/
     public boolean existeUsuario(String login, String correo) {
         Usuario resultado = null;
         SQLiteDatabase sqlLiteDB = appbd.getWritableDatabase();
@@ -39,6 +42,7 @@ public class BDDAOSqlLite {
         return cursor.moveToFirst();
     }
 
+    /*Se recibe los datos del usuario registrado y se inserta en la base de datos correspondiente*/
     public void setUsuario(String usuarioReg, String contraseniaReg,  String nombreReg, String apellidoReg, String correoReg) {
         SQLiteDatabase sqlliteDB = appbd.getWritableDatabase();
 
@@ -53,6 +57,7 @@ public class BDDAOSqlLite {
     }
 
 
+    /*Se obtienen los datos de la tabla resultados, y se devuelven en forma de arraylist de resultado a la funcion que invoca este metodo*/
     public ArrayList<Resultado> getResultados(){
         ArrayList<Resultado> resultados = new ArrayList<>();
         SQLiteDatabase sqlLiteDB = appbd.getWritableDatabase();
@@ -64,6 +69,7 @@ public class BDDAOSqlLite {
         return resultados;
     }
 
+    /*Se obtienen las noticias de la base de datos y se devuelven en formato de arraylist de noticia a la funcion que invoca este metodo*/
     public ArrayList<Noticia> getUltimasNoticias(){
         ArrayList<Noticia> noticias = new ArrayList<>();
         SQLiteDatabase sqlLiteDB = appbd.getWritableDatabase();
@@ -75,6 +81,7 @@ public class BDDAOSqlLite {
         return noticias;
     }
 
+    /*Se obtiene los jugadores en plantilla de la base de datos y se retorna un arraylist de jugadores a quien invoque*/
     public ArrayList<Jugador> getPlantilla(){
 
         ArrayList<Jugador> jugadores = new ArrayList<>();
@@ -87,6 +94,7 @@ public class BDDAOSqlLite {
         return jugadores;
     }
 
+    /*Obtiene la clasificación en base de datos y devuelve el arraylist de equipos a quien lo invoque*/
     public ArrayList<EquipoClasificacion> getClasificacion(){
         ArrayList<EquipoClasificacion> clasi = new ArrayList<>();
         SQLiteDatabase sqlLiteDB = appbd.getWritableDatabase();

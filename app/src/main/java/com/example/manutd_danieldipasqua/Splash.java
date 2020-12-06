@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/*Clase de la ventana de Splash que aparece al iniciar la aplicación*/
 public class Splash extends AppCompatActivity {
 
     @Override
@@ -15,7 +16,7 @@ public class Splash extends AppCompatActivity {
 
         new Handler().postDelayed(new Runnable() {
 
-
+            /*Una vez el tiempo se acabe (5Segs) se ejecuta lo que está dentro de run, llamando al siguiente activity (Login de usuario) y cierra este*/
             @Override
             public void run() {
                 // This method will be executed once the timer is over

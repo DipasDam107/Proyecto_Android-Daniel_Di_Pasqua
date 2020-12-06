@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.DialogFragment;
 
+/*Clase que extiende dialogfragment. Se usa al especificar un registro incorrecto */
 public class DialogoRegistro extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {

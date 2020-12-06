@@ -15,6 +15,7 @@ import com.example.manutd_danieldipasqua.databinding.PlantillaBinding;
 
 import java.util.ArrayList;
 
+/*Clase de la ventana de plantilla*/
 public class VentanaPlantilla  extends AppCompatActivity {
 
     private Button volver;
@@ -42,6 +43,8 @@ public class VentanaPlantilla  extends AppCompatActivity {
 
         getJugadores();
         rellenarSpinner();
+
+        /*Cada vez que cambie el item seleccionado lo establezco como jugador Bindeado, de manera que se muestran los datos de dicho jugador*/
         jugadoresSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -58,9 +61,12 @@ public class VentanaPlantilla  extends AppCompatActivity {
         });
     }
 
+    /*Simplemente obtiene los jugadores de la BD*/
     private void getJugadores(){
         jugadores = usrDAO.getPlantilla();
     }
+
+    /*Clase que se encarga de rellenar el spinner con los jugadores presentes*/
     private void rellenarSpinner(){
         ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, jugadores);
         jugadoresSpinner.setAdapter(adapter);

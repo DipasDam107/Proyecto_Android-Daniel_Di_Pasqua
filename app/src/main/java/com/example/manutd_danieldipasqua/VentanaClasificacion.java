@@ -11,8 +11,12 @@ import com.example.manutd_danieldipasqua.databinding.VentanaClasificacionBinding
 
 import java.util.ArrayList;
 
+/*Clase de la ventana de clasificación*/
 public class VentanaClasificacion extends AppCompatActivity {
 
+    /*Esta clase usa binding para mostrar los datos, siendo el array de equipos el protagonista. Lo recibo desde la clase de acceso a BD y lo
+    * defino como binding
+    * */
     Button volver;
     VentanaClasificacionBinding binding;
     BDDAOSqlLite usrDAO;
@@ -31,6 +35,7 @@ public class VentanaClasificacion extends AppCompatActivity {
 
     }
 
+    /*Otro onClick declarado desde la activity*/
     public void volverButton(View view) {
         finish();
     }

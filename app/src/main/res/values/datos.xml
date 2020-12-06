@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- valores de prueba para el spinner de jugadores y comprobar el aspecto -->
 <resources>
     <string-array name="planets_array">
         <item>Mercury</item>

@@ -1,6 +1,8 @@
 package com.example.manutd_danieldipasqua;
 
+/*Clase utilizada para almacenar los jugadores en plantilla de la base de datos*/
 public class Jugador {
+
     String nombre, apellido, posicion, demarcacion, rol, descripcion, nacionalidad, rep;
     int numero;
 

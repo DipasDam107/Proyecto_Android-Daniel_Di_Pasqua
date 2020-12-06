@@ -1,5 +1,6 @@
 package com.example.manutd_danieldipasqua;
 
+/*Clase utilizada para construir el arraylist de equipos de la clasificacion*/
 public class EquipoClasificacion{
 
     String equipo, siglas;

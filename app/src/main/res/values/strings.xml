@@ -1,5 +1,7 @@
 <resources>
+
     <string name="app_name">Manchester United</string>
+    <!-- Ventana de Login y Registro-->
     <string name="usuario">Usuario</string>
     <string name="hintUsuario">Usuario o Correo</string>
     <string name="hintContraseña">Contraseña</string>
@@ -11,6 +13,14 @@
     <string name="registrarse">Registrarse</string>
     <string name="registrar">Registrar</string>
 
+    <!-- Errores-->
+    <string name="errorUsuario">Debes especificar un nombre de usuario válido</string>
+    <string name="errorContra">Debes especificar una contraseña de usuario válido</string>
+    <string name="errorNombre">Debes especificar un nombre válido</string>
+    <string name="errorApellido">Debes especificar un apellido válido</string>
+    <string name="errorCorreo">Debes especificar un correo de usuario válido</string>
+
+    <!--Menu Principal -->
     <string name="inicioSesion">INICIO DE SESION</string>
     <string name="registro">NUEVO USUARIO</string>
     <string name="cerrarSesion">Cerrar Sesión</string>
@@ -78,10 +88,5 @@
     <string name="registroIncorrecto">El usuario o el correo que has introducido ya existen. Compruébalos y vuelve a intentarlo de nuevo.</string>
     <string name="errorRegistro">Error de Registro</string>
 
-    <!-- Errores-->
-    <string name="errorUsuario">Debes especificar un nombre de usuario válido</string>
-    <string name="errorContra">Debes especificar una contraseña de usuario válido</string>
-    <string name="errorNombre">Debes especificar un nombre válido</string>
-    <string name="errorApellido">Debes especificar un apellido válido</string>
-    <string name="errorCorreo">Debes especificar un correo de usuario válido</string>
+
 </resources>

@@ -2,12 +2,10 @@ package com.example.manutd_danieldipasqua;
 
 import android.provider.BaseColumns;
 
+/*Clase utilizada para registrar usuarios*/
 public final class FeedReaderUsuario {
-    // To prevent someone from accidentally instantiating the contract class,
-    // make the constructor private.
-    private FeedReaderUsuario() {}
 
-    /* Inner class that defines the table contents */
+    private FeedReaderUsuario() {}
     public static class FeedEntry implements BaseColumns {
         public static final String TABLE_NAME = "usuarios";
         public static final String COLUMN_NAME_USER = "usuario";

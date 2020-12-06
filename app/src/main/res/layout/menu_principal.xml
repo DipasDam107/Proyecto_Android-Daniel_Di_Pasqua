@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Etiqueta layout para el binding  -->
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
-
+    <!-- Se utilizarán el arraylist de equipos para la clasificación y partido ultimo de resultados  -->
     <data>
         <import type="java.util.ArrayList"/>
         <variable

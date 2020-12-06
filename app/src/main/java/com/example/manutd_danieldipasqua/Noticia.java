@@ -2,6 +2,7 @@ package com.example.manutd_danieldipasqua;
 
 import java.io.Serializable;
 
+/*Clase noticia que se encarga de almacenar los datos de las noticias en base de datos*/
 public class Noticia implements Serializable {
     String titulo, cuerpo, autor, fecha;
 

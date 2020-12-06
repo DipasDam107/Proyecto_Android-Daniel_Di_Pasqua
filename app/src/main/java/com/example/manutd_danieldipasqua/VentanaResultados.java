@@ -40,6 +40,7 @@ public class VentanaResultados extends AppCompatActivity {
 
         }
 
+        /*Clase que obtiene los resultados en BD, y por cada resultado crea una fila con los datos de dicho partido y la añade a la tabla existente*/
         private void rellenarResultados(){
 
             ArrayList <Resultado> resultados = usrDAO.getResultados();

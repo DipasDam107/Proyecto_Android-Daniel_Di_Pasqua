@@ -12,8 +12,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
+/*Clase de la ventana de registro*/
 public class registroMenu extends AppCompatActivity {
 
+    /*Inicializo variables de los controles*/
     private Button registrar;
     private Button volver;
     private EditText nombre;
@@ -22,6 +24,7 @@ public class registroMenu extends AppCompatActivity {
     private EditText contra;
     private EditText correo;
 
+    /*Inicializo la clase de acceso a BD*/
     BDDAOSqlLite usrDAO;
 
     @Override
@@ -30,8 +33,10 @@ public class registroMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_registro);
 
+        /* Instancio la clase de acceso a BD*/
         usrDAO = new BDDAOSqlLite(this);
 
+        /*Meto controles en las variables respectivas*/
         registrar = (Button) findViewById(R.id.registrarseButton);
         volver = (Button) findViewById(R.id.volverButton);
         nombre = (EditText) findViewById(R.id.nombreEditText);
@@ -40,6 +45,7 @@ public class registroMenu extends AppCompatActivity {
         contra = (EditText) findViewById(R.id.contraRegistroEditText);
         usuario = (EditText) findViewById(R.id.nomUsuarioEditText);
 
+        /*Declaro los listeners anónimos*/
         volver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,20 +72,23 @@ public class registroMenu extends AppCompatActivity {
         });
     }
 
+    /*Esta funcion se llama dandole a OK desde el correo (ime action send) o bien dando al botón registrar*/
     private void registrar(){
+        /*Realiza las comprobaciones de campos*/
         if(Comprobaciones.comprobarTexto(nombre.getText().toString()))
             if(Comprobaciones.comprobarTexto(apellido.getText().toString()))
                 if(Comprobaciones.comprobarTexto(usuario.getText().toString()))
                     if(Comprobaciones.comprobarTexto(contra.getText().toString()))
                         if(Comprobaciones.comprobarCorreo(correo.getText().toString())){
 
+                            /*Si los campos son válidos, comprueba si existe el usuario con ese correo o con ese nombre. En caso contrario llama a la funcióm que crea el usuario en la BD*/
                             if(!usrDAO.existeUsuario(usuario.getText().toString(), correo.getText().toString())){
                                 usrDAO.setUsuario(usuario.getText().toString(), contra.getText().toString(), nombre.getText().toString(), apellido.getText().toString(), correo.getText().toString());
                                 Toast.makeText(this, "Usuario Registrado", Toast.LENGTH_LONG).show();
                                 finish();
                             }
                             else{
-
+                                /*En caso de que exista el usuario muestra una ventana de dialogo con el error*/
                                 DialogoRegistro d= new DialogoRegistro();
                                 d.setCancelable(false);
                                 FragmentManager fm= this.getSupportFragmentManager();
@@ -101,8 +110,4 @@ public class registroMenu extends AppCompatActivity {
 
     }
 
-    private void registraUsuario(String usuarioReg, String contraseniaReg, String correoReg, String nombreReg, String apellidoReg){
-
-
-    }
 }

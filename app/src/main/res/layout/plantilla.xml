@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Etiqueta layout para el binding  -->
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
+    <!-- El jugador seleccionado cambia cada vez que lo hace el item seleccionado  -->
     <data>
         <variable
             name="seleccionado"

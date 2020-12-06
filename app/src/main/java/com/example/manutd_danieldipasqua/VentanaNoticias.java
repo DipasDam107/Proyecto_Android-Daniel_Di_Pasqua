@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.example.manutd_danieldipasqua.databinding.ActivityVentanaNoticiasBinding;
 
+/*Clase de la ventana noticias*/
 public class VentanaNoticias extends AppCompatActivity {
 
     private Button volver;
@@ -21,6 +22,7 @@ public class VentanaNoticias extends AppCompatActivity {
         setContentView(R.layout.activity_ventana_noticias);
         ActivityVentanaNoticiasBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_ventana_noticias);
 
+        /*Recibe la noticia desde el menu principal y la indica como bindeada. De esta manera se imprime su contenido en pantalla*/
         noticia = (Noticia) getIntent().getSerializableExtra("Noticia");
         binding.setNoticia(noticia);
 

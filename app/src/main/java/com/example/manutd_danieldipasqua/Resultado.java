@@ -1,5 +1,7 @@
 package com.example.manutd_danieldipasqua;
 
+/*Clase de resultados que permitirá almacenar los resultados de la base de datos*/
+
 public class Resultado {
     private String rival, campo, competicion, resultado;
 
@@ -42,6 +44,7 @@ public class Resultado {
         this.resultado = resultado;
     }
 
+    /*Defino un metodo que devolverá permite imprimir el ultimo resultado con un formato concreto, para la Ultima noticia del menú principal*/
     public String getUltimoResultado(){
         if(this.campo.equals("Old Trafford"))
             return "Ultima Hora: Manchester United " + resultado + " " + rival + " (Final del Partido)";

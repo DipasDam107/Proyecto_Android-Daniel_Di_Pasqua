@@ -2,6 +2,7 @@ package com.example.manutd_danieldipasqua;
 
 import java.io.Serializable;
 
+/*Clase usuario que permite almacenar el usuario que se conecta a la app*/
 public class Usuario implements Serializable {
     String nombre, apellido, usuario, contra, correo;
 

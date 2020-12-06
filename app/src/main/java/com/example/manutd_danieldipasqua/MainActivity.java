@@ -19,6 +19,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+/*Clase donde se inicia la Aplicación. Pantalla de login*/
 public class MainActivity extends AppCompatActivity {
 
     BDDAOSqlLite usrDAO;
@@ -73,12 +74,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /* La funcion de inicio de sesión se llama dandole a siguiente en la contraseña (ime action send) o al boton de iniciar*/
     private void iniciaSesion(){
+        /*Comprueba que los campos tienen texto y lanza en forma de toast en caso contrario los avisos pertinentes*/
         if(Comprobaciones.comprobarTexto(usuario.getText().toString()))
             if(Comprobaciones.comprobarTexto(contra.getText().toString()))
             {
                 Usuario usr = usrDAO.getUsuario(usuario.getText().toString(), contra.getText().toString());
 
+                /*Si el usuario existe lo pasa como parámetro al siguiente activity (Mensaje de bienvenida)*/
                 if(usr != null){
                     Toast.makeText(getApplicationContext(), "Iniciando Sesion...", Toast.LENGTH_LONG).show();
                     Intent i = new Intent(this, MenuPrincipal.class);
@@ -86,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(i);
                     finish();
                 }
+                /*Si el usuario no existe lanza un mensaje de dialogo especificando el error*/
                 else{
                     DialogoLogin d= new DialogoLogin();
                     d.setCancelable(false);
@@ -100,6 +105,8 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), getString(R.string.errorUsuario), Toast.LENGTH_LONG).show();
     }
 
+
+    /*Este método copia la base de datos a la memoria del teléfono, dentro de la aplicación en la carpeta databases. Si ya existe no realiza ninguna operacion*/
     private void copiarBD() {
         String bddestino = "/data/data/" + getPackageName() + "/databases/"
                 + BDUnited.NOME_BD;
@@ -131,11 +138,10 @@ public class MainActivity extends AppCompatActivity {
                 outputstream.write(buffer, 0, tamread);
             }
 
-
             inputstream.close();
             outputstream.flush();
             outputstream.close();
-            Toast.makeText(getApplicationContext(), "BD Copiada", Toast.LENGTH_LONG).show();
+
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
